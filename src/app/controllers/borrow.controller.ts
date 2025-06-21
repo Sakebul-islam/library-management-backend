@@ -39,18 +39,21 @@ borrowRoutes.get(
         },
         {
           $lookup: {
-            from: "books", // the actual MongoDB collection name
-            localField: "_id", // _id here is from the group stage, i.e. book._id
-            foreignField: "_id", // matches the actual Book _id in books collection
+            from: "books",
+            localField: "_id",
+            foreignField: "_id",
             as: "bookDetails",
           },
         },
         {
-          $unwind: "$bookDetails",
+          $unwind: {
+            path: "$bookDetails",
+            preserveNullAndEmptyArrays: false,
+          },
         },
         {
           $project: {
-            _id: 0,
+            _id: 0, 
             totalQuantity: 1,
             book: {
               title: "$bookDetails.title",
@@ -70,6 +73,7 @@ borrowRoutes.get(
     }
   }
 );
+
 
 // global error handler
 borrowRoutes.use(
