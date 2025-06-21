@@ -6,10 +6,10 @@ A comprehensive and scalable RESTful API designed to manage a library's book inv
 
 ## 🚀 Core Features
 
-* Add, view, update, and delete books
-* Borrow books with stock validation
-* Aggregated summary of borrowed books
-* Clean structure with TypeScript and proper error handling
+- Add, view, update, and delete books
+- Borrow books with stock validation
+- Aggregated summary of borrowed books
+- Clean structure with TypeScript and proper error handling
 
 ---
 
