@@ -86,12 +86,12 @@ The base URL for all API endpoints is `/api`.
 
 | Method   | Endpoint                                                       | Description                                   |
 | :------- | :------------------------------------------------------------- | :-------------------------------------------- |
-| `GET`    | `/books`                                                       | Retrieve a list of all books.                 |
+| `GET`    | `/api/books`                                                       | Retrieve a list of all books.                 |
 | `GET`    | `/api/books?filter=FANTASY&sortBy=createdAt&sort=desc&limit=5` | Retrieve a list of filtered books.            |
-| `POST`   | `/books`                                                       | Add a new book to the library.                |
-| `GET`    | `/books/:id`                                                   | Get the details of a specific book by its ID. |
-| `PATCH`  | `/books/:id`                                                   | Update the information for a specific book.   |
-| `DELETE` | `/books/:id`                                                   | Remove a book from the library.               |
+| `POST`   | `/api/books`                                                       | Add a new book to the library.                |
+| `GET`    | `/api/books/:id`                                                   | Get the details of a specific book by its ID. |
+| `PATCH`  | `/api/books/:id`                                                   | Update the information for a specific book.   |
+| `DELETE` | `/api/books/:id`                                                   | Remove a book from the library.               |
 
 #### 📗 Borrowing Endpoints
 
