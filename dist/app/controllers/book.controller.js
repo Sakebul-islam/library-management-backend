@@ -39,7 +39,6 @@ exports.booksRoutes.get("/", (req, res, next) => __awaiter(void 0, void 0, void 
         if (filter) {
             query.genre = filter;
         }
-        console.log(req.query);
         const sortOrder = sort === "desc" ? -1 : 1;
         const books = yield book_model_1.Book.find(query)
             .sort({ [sortBy]: sortOrder })

@@ -21,7 +21,7 @@ const PORT = process.env.PORT || 5000;
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            yield mongoose_1.default.connect(process.env.MONGODB_URI);
+            yield mongoose_1.default.connect(process.env.mongo_uri);
             console.log(chalk_1.default.green("✔ Connected to MongoDB Using Mongoose!!"));
             server = app_1.default.listen(PORT, () => {
                 const localUrl = `http://127.0.0.1:${PORT}`;
