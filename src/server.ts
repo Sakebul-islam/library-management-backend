@@ -21,14 +21,6 @@ async function main() {
       console.log(`🕝  Started at ${time}`);
     });
 
-    // process.on("SIGINT", async () => {
-    //   console.log(chalk.red("\n✖ Gracefully shutting down..."));
-    //   await mongoose.disconnect();
-    //   server.close(() => {
-    //     console.log(chalk.yellow("🚪 Server closed. Goodbye!"));
-    //     process.exit(0);
-    //   });
-    // });
   } catch (error) {
     console.log(error);
     console.log(chalk.red("❌ Error starting server:"), error);
