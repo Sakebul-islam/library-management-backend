@@ -36,7 +36,6 @@ booksRoutes.get(
       if (filter) {
         query.genre = filter;
       }
-      console.log(req.query);
       const sortOrder = sort === "desc" ? -1 : 1;
 
       const books = await Book.find(query)
