@@ -26,9 +26,9 @@ function main() {
             server = app_1.default.listen(PORT, () => {
                 const localUrl = `http://127.0.0.1:${PORT}`;
                 const time = new Date().toLocaleTimeString();
-                console.log(chalk_1.default.bold.green("✔   App is running"));
-                console.log(chalk_1.default.cyan("➜   Local:  ") + chalk_1.default.underline.blue(localUrl));
-                console.log(chalk_1.default.gray("🕝  Started at ") + chalk_1.default.yellow(time));
+                console.log(`✔   App is running`);
+                console.log(`➜   Local:  + ${localUrl}`);
+                console.log(`🕝  Started at ${time}`);
             });
             // process.on("SIGINT", async () => {
             //   console.log(chalk.red("\n✖ Gracefully shutting down..."));
