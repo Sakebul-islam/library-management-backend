@@ -26,20 +26,18 @@ function main() {
             server = app_1.default.listen(PORT, () => {
                 const localUrl = `http://127.0.0.1:${PORT}`;
                 const time = new Date().toLocaleTimeString();
-                console.log();
                 console.log(chalk_1.default.bold.green("✔   App is running"));
                 console.log(chalk_1.default.cyan("➜   Local:  ") + chalk_1.default.underline.blue(localUrl));
                 console.log(chalk_1.default.gray("🕝  Started at ") + chalk_1.default.yellow(time));
-                console.log();
             });
-            process.on("SIGINT", () => __awaiter(this, void 0, void 0, function* () {
-                console.log(chalk_1.default.red("\n✖ Gracefully shutting down..."));
-                yield mongoose_1.default.disconnect();
-                server.close(() => {
-                    console.log(chalk_1.default.yellow("🚪 Server closed. Goodbye!"));
-                    process.exit(0);
-                });
-            }));
+            // process.on("SIGINT", async () => {
+            //   console.log(chalk.red("\n✖ Gracefully shutting down..."));
+            //   await mongoose.disconnect();
+            //   server.close(() => {
+            //     console.log(chalk.yellow("🚪 Server closed. Goodbye!"));
+            //     process.exit(0);
+            //   });
+            // });
         }
         catch (error) {
             console.log(error);
