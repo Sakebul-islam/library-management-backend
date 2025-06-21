@@ -1,4 +1,4 @@
-# 📚 Library Management Backend
+# 📚 Library Management API
 
 A comprehensive and scalable RESTful API designed to manage a library's book inventory and borrowing records. This backend is built with **Node.js**, **Express**, **TypeScript**, and **MongoDB** (utilizing Mongoose), ensuring a robust and type-safe application.
 
